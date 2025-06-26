@@ -1,29 +1,6 @@
-# Grundlegende Shell‑Befehle
+# Übungsaufgaben 
 
-| Nr. | Befehl    | Kurzbeschreibung                                             | Beispiel                      |        |
-| --- | --------- | ------------------------------------------------------------ | ----------------------------- | ------ |
-| 2   | `pwd`     | Gibt das aktuelle Arbeitsverzeichnis aus.                    | `pwd`                         |        |
-| 3   | `cd`      | Wechselt in ein anderes Verzeichnis.                         | `cd /tmp`                     |        |
-| 4   | `ls`      | Listet Inhalte eines Verzeichnisses.                         | `ls -l`                       |        |
-| 5   | `touch`   | Erstellt eine leere Datei oder aktualisiert den Zeitstempel. | `touch beispiel.txt`          |        |
-| 6   | `file`    | Zeigt den Dateityp einer Datei an.                           | `file beispiel.txt`           |        |
-| 7   | `cat`     | Gibt den Inhalt von Dateien aus.                             | `cat beispiel.txt`            |        |
-| 8   | `less`    | Blättert komfortabel durch längere Dateien.                  | `less /var/log/syslog`        |        |
-| 9   | `history` | Listet zuletzt eingegebene Befehle auf.                      | \`history                     | tail\` |
-| 10  | `cp`      | Kopiert Dateien oder Ordner.                                 | `cp quelle.txt ziel.txt`      |        |
-| 11  | `mv`      | Verschiebt oder benennt Dateien/Ordner.                      | `mv altname.txt neuename.txt` |        |
-| 12  | `mkdir`   | Erstellt ein neues Verzeichnis.                              | `mkdir neuer_ordner`          |        |
-| 13  | `rm`      | Entfernt Dateien oder Verzeichnisse.                         | `rm beispiel.txt`             |        |
-| 14  | `find`    | Durchsucht Verzeichnisse rekursiv.                           | `find . -name "*.txt"`        |        |
-| 15  | `help`    | Zeigt Hilfe für Shell‑Builtins.                              | `help cd`                     |        |
-| 16  | `man`     | Öffnet die Handbuchseite eines Befehls.                      | `man ls`                      |        |
-| 17  | `whatis`  | Gibt eine Kurzbeschreibung eines Befehls.                    | `whatis grep`                 |        |
-| 18  | `alias`   | Erstellt oder listet Aliase.                                 | `alias ll='ls -l'`            |        |
-| 19  | `exit`    | Beendet die aktuelle Shell‑Sitzung.                          | `exit`                        |        |
-
-## Übungsaufgaben (Kombinationen aus 3–4 Befehlen)
-
-> **So funktioniert’s:** Lies zuerst nur die Schritt‑Beschreibung. Klappe dann **Tipps anzeigen** (nur Befehle) oder **Lösung anzeigen** (kompletter Code) auf, wenn du Hilfe benötigst.
+> **So funktioniert’s:** Lies zuerst nur die Schritt‑Beschreibung. Klappe dann **Tipps anzeigen** (nur Befehle) auf, wenn du Hilfe benötigst. Die vollständigen Lösungen findest du im Abschnitt **„Lösungen“** am Ende des Dokuments.
 
 ---
 
@@ -37,24 +14,12 @@
 
 <details><summary>Tipps anzeigen</summary>
 
-```
+```bash
 mkdir
 cd
 touch
 echo
 cat
-```
-
-</details>
-
-<details><summary>Lösung anzeigen</summary>
-
-```bash
-mkdir projekt
-cd projekt
-touch readme.txt
-echo "Hallo Shell" > readme.txt
-cat readme.txt
 ```
 
 </details>
@@ -69,20 +34,10 @@ cat readme.txt
 
 <details><summary>Tipps anzeigen</summary>
 
-```
+```bash
 mkdir
 cp
 ls
-```
-
-</details>
-
-<details><summary>Lösung anzeigen</summary>
-
-```bash
-mkdir ~/backup
-cp datei.txt ~/backup/
-ls -l ~/backup
 ```
 
 </details>
@@ -98,21 +53,10 @@ ls -l ~/backup
 
 <details><summary>Tipps anzeigen</summary>
 
-```
+```bash
 mkdir
 mv
 date
-pwd
-```
-
-</details>
-
-<details><summary>Lösung anzeigen</summary>
-
-```bash
-mkdir old
-mv data.txt old/
-mv old/data.txt old/data_$(date +%F).txt
 pwd
 ```
 
@@ -128,20 +72,10 @@ pwd
 
 <details><summary>Tipps anzeigen</summary>
 
-```
+```bash
 history
 file
 less
-```
-
-</details>
-
-<details><summary>Lösung anzeigen</summary>
-
-```bash
-history > hist.txt
-file hist.txt
-less hist.txt
 ```
 
 </details>
@@ -156,27 +90,15 @@ less hist.txt
 
 <details><summary>Tipps anzeigen</summary>
 
-```
+```bash
 alias
 ```
 
 </details>
 
-<details><summary>Lösung anzeigen</summary>
-
-```bash
-alias LL='ls -la'
-alias LL
-LL
-```
-
-</details>
-
 ---
 
-## Kurzübungen 
-
----
+## Kurzübungen
 
 ### Kurzübung 1 – Home & Übersicht
 
@@ -185,17 +107,8 @@ LL
 
 <details><summary>Tipps anzeigen</summary>
 
-```
-cd
-ls -la
-```
-
-</details>
-
-<details><summary>Lösung anzeigen</summary>
-
 ```bash
-cd ~
+cd
 ls -la
 ```
 
@@ -206,25 +119,15 @@ ls -la
 ### Kurzübung 2 – Backup Schnellkopie
 
 1. Lege im aktuellen Verzeichnis einen Ordner **backup** an.
-2. Kopiere die Datei **notes.txt**  und benenne sie dabei zu **notes\_backup.txt** um.
+2. Kopiere die Datei **notes.txt** und benenne sie dabei zu **notes\_backup.txt** um.
 3. Prüfe durch Auflisten des Ordners, ob die Kopie da ist.
 
 <details><summary>Tipps anzeigen</summary>
 
-```
+```bash
 mkdir
 cp
 ls
-```
-
-</details>
-
-<details><summary>Lösung anzeigen</summary>
-
-```bash
-mkdir backup
-cp notes.txt backup/notes_backup.txt
-ls -l backup
 ```
 
 </details>
@@ -239,18 +142,9 @@ ls -l backup
 
 <details><summary>Tipps anzeigen</summary>
 
-```
+```bash
 mv
 ls
-```
-
-</details>
-
-<details><summary>Lösung anzeigen</summary>
-
-```bash
-mv reprot.txt report.txt
-ls -l
 ```
 
 </details>
@@ -265,23 +159,13 @@ ls -l
 
 <details><summary>Tipps anzeigen</summary>
 
-```
+```bash
 mkdir
 rm -r
 ls
 ```
 
-> **Erklärung:** `mkdir` legt Ordner an, `rm -r` entfernt sie rekursiv. Für leere Ordner ginge auch `rmdir` (nicht in Grundliste).
-
-</details>
-
-<details><summary>Lösung anzeigen</summary>
-
-```bash
-mkdir tmp_empty
-rm -r tmp_empty
-ls -l
-```
+> **Hinweis:** `mkdir` legt Ordner an, `rm -r` entfernt sie rekursiv. Für leere Ordner ginge auch `rmdir`.
 
 </details>
 
@@ -295,13 +179,128 @@ ls -l
 
 <details><summary>Tipps anzeigen</summary>
 
-```
+```bash
 pwd
 cd ..
 ls -l
 ```
 
 </details>
+
+---
+
+## Lösungen
+
+### Aufgabe 1 – Mini‑Projektordner
+
+<details><summary>Lösung anzeigen</summary>
+
+```bash
+mkdir projekt
+cd projekt
+touch readme.txt
+echo "Hallo Shell" > readme.txt
+cat readme.txt
+```
+
+</details>
+
+### Aufgabe 2 – Datei sichern
+
+<details><summary>Lösung anzeigen</summary>
+
+```bash
+mkdir ~/backup
+cp datei.txt ~/backup/
+ls -l ~/backup
+```
+
+</details>
+
+### Aufgabe 3 – Datei archivieren und Verzeichnis anzeigen
+
+<details><summary>Lösung anzeigen</summary>
+
+```bash
+mkdir old
+mv data.txt old/
+mv old/data.txt old/data_$(date +%F).txt
+pwd
+```
+
+</details>
+
+### Aufgabe 4 – Verlauf sichern und untersuchen
+
+<details><summary>Lösung anzeigen</summary>
+
+```bash
+history > hist.txt
+file hist.txt
+less hist.txt
+```
+
+</details>
+
+### Aufgabe 5 – Komfort‑Listing per Alias
+
+<details><summary>Lösung anzeigen</summary>
+
+```bash
+alias LL='ls -la'
+alias LL
+LL
+```
+
+</details>
+
+### Kurzübung 1 – Home & Übersicht
+
+<details><summary>Lösung anzeigen</summary>
+
+```bash
+cd ~
+ls -la
+```
+
+</details>
+
+### Kurzübung 2 – Backup Schnellkopie
+
+<details><summary>Lösung anzeigen</summary>
+
+```bash
+mkdir backup
+cp notes.txt backup/notes_backup.txt
+ls -l backup
+```
+
+</details>
+
+### Kurzübung 3 – Falscher Dateiname korrigieren
+
+<details><summary>Lösung anzeigen</summary>
+
+```bash
+mv reprot.txt report.txt
+ls -l
+```
+
+</details>
+
+### Kurzübung 4 – Leeres Verzeichnis anlegen und entfernen
+
+<details><summary>Lösung anzeigen</summary>
+
+```bash
+mkdir tmp_empty
+rm -r tmp_empty
+ls -l
+```
+
+</details>
+
+### Kurzübung 5 – Verzeichnisstruktur Check
 
 <details><summary>Lösung anzeigen</summary>
 
