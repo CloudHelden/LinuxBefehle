@@ -35,6 +35,8 @@
 4. Schreibe den Text *Hallo Shell* in die Datei.
 5. Gib den Inhalt der Datei im Terminal aus.
 
+<details><summary>Tipps anzeigen</summary>
+
 ```
 mkdir
 cd
@@ -42,6 +44,10 @@ touch
 echo
 cat
 ```
+
+</details>
+
+<details><summary>Lösung anzeigen</summary>
 
 ```bash
 mkdir projekt
@@ -51,6 +57,8 @@ echo "Hallo Shell" > readme.txt
 cat readme.txt
 ```
 
+</details>
+
 ---
 
 ### Aufgabe 2 – Datei sichern
@@ -59,17 +67,25 @@ cat readme.txt
 2. Kopiere die Datei **datei.txt** in diesen Ordner.
 3. Liste den Inhalt des Ordners auf, um die Sicherung zu prüfen.
 
+<details><summary>Tipps anzeigen</summary>
+
 ```
 mkdir
 cp
 ls
 ```
 
+</details>
+
+<details><summary>Lösung anzeigen</summary>
+
 ```bash
 mkdir ~/backup
 cp datei.txt ~/backup/
 ls -l ~/backup
 ```
+
+</details>
 
 ---
 
@@ -80,6 +96,8 @@ ls -l ~/backup
 3. Benenne die Datei so um, dass das aktuelle Datum angehängt wird (z. B. `data_$(date +%F).txt`).
 4. Zeige den Pfad des aktuellen Arbeitsverzeichnisses an.
 
+<details><summary>Tipps anzeigen</summary>
+
 ```
 mkdir
 mv
@@ -87,12 +105,18 @@ date
 pwd
 ```
 
+</details>
+
+<details><summary>Lösung anzeigen</summary>
+
 ```bash
 mkdir old
 mv data.txt old/
 mv old/data.txt old/data_$(date +%F).txt
 pwd
 ```
+
+</details>
 
 ---
 
@@ -102,17 +126,25 @@ pwd
 2. Prüfe den Dateityp von **hist.txt**.
 3. Öffne die Datei seitenweise, um den Verlauf zu durchstöbern (Navigation in *less*: *Leertaste* vorwärts, *b* rückwärts, *q* beenden).
 
+<details><summary>Tipps anzeigen</summary>
+
 ```
 history
 file
 less
 ```
 
+</details>
+
+<details><summary>Lösung anzeigen</summary>
+
 ```bash
 history > hist.txt
 file hist.txt
 less hist.txt
 ```
+
+</details>
 
 ---
 
@@ -122,9 +154,15 @@ less hist.txt
 2. Lass dir anzeigen, wie der Alias definiert ist.
 3. Nutze den Alias, um den Inhalt des aktuellen Verzeichnisses aufzulisten.
 
+<details><summary>Tipps anzeigen</summary>
+
 ```
 alias
 ```
+
+</details>
+
+<details><summary>Lösung anzeigen</summary>
 
 ```bash
 alias LL='ls -la'
@@ -132,9 +170,11 @@ alias LL
 LL
 ```
 
-## Kurzübungen (Zeitlimit: ca. 5 Minuten)
+</details>
 
-> **Ziel:** 5 schnelle Aufgaben hintereinander lösen. Nimm dir pro Aufgabe höchstens 1 Minute Zeit. Nutze die Grundbefehle aus der Tabelle oben. Neue Befehle werden erklärt.
+---
+
+## Kurzübungen 
 
 ---
 
@@ -143,15 +183,23 @@ LL
 1. Wechsle in dein Home‑Verzeichnis.
 2. Liste **alle** Dateien und Ordner (auch versteckte) detailliert auf.
 
+<details><summary>Tipps anzeigen</summary>
+
 ```
 cd
 ls -la
 ```
 
+</details>
+
+<details><summary>Lösung anzeigen</summary>
+
 ```bash
 cd ~
 ls -la
 ```
+
+</details>
 
 ---
 
@@ -161,17 +209,25 @@ ls -la
 2. Kopiere die Datei **notes.txt**  und benenne sie dabei zu **notes\_backup.txt** um.
 3. Prüfe durch Auflisten des Ordners, ob die Kopie da ist.
 
+<details><summary>Tipps anzeigen</summary>
+
 ```
 mkdir
 cp
 ls
 ```
 
+</details>
+
+<details><summary>Lösung anzeigen</summary>
+
 ```bash
 mkdir backup
 cp notes.txt backup/notes_backup.txt
 ls -l backup
 ```
+
+</details>
 
 ---
 
@@ -181,15 +237,23 @@ ls -l backup
 2. Benenne die Datei korrekt in **report.txt** um.
 3. Zeige den Ordnerinhalt, um den neuen Namen zu prüfen.
 
+<details><summary>Tipps anzeigen</summary>
+
 ```
 mv
 ls
 ```
 
+</details>
+
+<details><summary>Lösung anzeigen</summary>
+
 ```bash
 mv reprot.txt report.txt
 ls -l
 ```
+
+</details>
 
 ---
 
@@ -229,14 +293,22 @@ ls -l
 2. Wechsle eine Ebene nach oben.
 3. Liste den Inhalt des neuen Pfades detailliert auf.
 
+<details><summary>Tipps anzeigen</summary>
+
 ```
 pwd
 cd ..
 ls -l
 ```
 
+</details>
+
+<details><summary>Lösung anzeigen</summary>
+
 ```bash
 pwd
 cd ..
 ls -l
 ```
+
+</details>
