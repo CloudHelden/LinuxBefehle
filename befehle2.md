@@ -48,7 +48,8 @@ Die **Standardeingabe** ist der Datenstrom, aus dem Programme lesen. Üblicherwe
 
 1. **Worte zählen:** Leite `peanuts.txt` via `<` in `wc -w`, um die Wortanzahl zu bestimmen.
 2. **Sortieren:** Erstelle `numbers.txt` mit den Zeilen 3, 1, 2. Sortiere die Datei per `sort` und `<` in `sorted.txt`.
-3. **Vergleichen:** Nutze `diff` mit `<` für zwei Dateien (`peanuts.txt` und `banana.txt`) und leite das Ergebnis auf den Bildschirm.
+3. Was ist der unterschied wenn ich echo oder printf verwende für Aufgabe 2?
+4. **Vergleichen:** Nutze `diff` mit `<` für zwei Dateien (`peanuts.txt` und `banana.txt`) und leite das Ergebnis auf den Bildschirm.
 
 ---
 
